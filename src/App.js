@@ -5,7 +5,7 @@ class App extends React.Component{
 
   render(){
     return(
-      <h1>TEST for Netlify</h1>
+      <h1>TEST for Netlify TEST</h1>
     );
   }
 }
