@@ -43,7 +43,7 @@ class App extends React.Component {
         </form>
 
         {this.state.displayResults &&
-          <Card>
+          <Card id="card">
             <Card.Img width={400} height={500} variant="top" src={this.state.imgSrc}></Card.Img>
             <Card.Body>
               <Card.Text>
