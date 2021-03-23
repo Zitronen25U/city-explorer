@@ -26,7 +26,7 @@ class App extends React.Component {
     this.setState({
       location: locationArray[0],
       displayResults: true,
-      imgSrc: `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_THEKEY}&center=${locationArray[0].lat},${locationArray[0].lon}&zoom=13`
+      imgSrc: `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_THEKEY}&center=${locationArray[0].lat},${locationArray[0].lon}&zoom=12`
     });
 
   };
@@ -44,7 +44,7 @@ class App extends React.Component {
 
         {this.state.displayResults &&
           <Card id="card">
-            <Card.Img width={400} height={500} variant="top" src={this.state.imgSrc}></Card.Img>
+            <Card.Img width={100} variant="top" src={this.state.imgSrc}></Card.Img>
             <Card.Body>
               <Card.Text>
                 {this.state.locations}
