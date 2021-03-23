@@ -66,3 +66,14 @@ class App extends React.Component {
 }
 
 export default App;
+
+
+// in error, there is a message that you can display in the obj.
+
+// you can make it so if/when the error happens, you can trigger diff string results IE 404, 400 etc. 
+
+// in error file you can just call that prop message (maybe a modal popup?)
+
+// handle close 
+
+// in alert tag, you can do that hanlde close 
