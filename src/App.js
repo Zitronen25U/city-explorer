@@ -38,13 +38,13 @@ class App extends React.Component {
         <h1 id="hello">Hello! Lets find your city!</h1>
 
         <form id="form" onSubmit={this.getLocationInfo}>
-          <input onChange={(e) => this.setState({ searchQuery: e.target.value })} placeholder="Type a City!"></input>
-          <button id="button" type="submit">Submit Me</button>
+          <input class="button" onChange={(e) => this.setState({ searchQuery: e.target.value })} placeholder="Type a City!"></input>
+          <button class="button" type="submit">Submit Me</button>
         </form>
 
         {this.state.displayResults &&
           <Card id="card">
-            <Card.Img width={100} variant="top" src={this.state.imgSrc}></Card.Img>
+            <Card.Img height={300} width={300} variant="top" src={this.state.imgSrc}></Card.Img>
             <Card.Body>
               <Card.Text>
                 {this.state.locations}
