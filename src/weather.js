@@ -11,8 +11,9 @@ class Weather extends React.Component {
   }
 
   componentDidMount = async () => {
-    const SERVER = 'http//localhost:3001';
-    const weather = await axios.get(`${SERVER}/weather`);
+    const SERVER = process.env.REACT_APP_SERVER;
+    console.log(SERVER);
+    const weather = await axios.get(`${SERVER}weather`);
     const weatherArr = weather.data;
     console.log(weatherArr);
     this.setState({ weatherList: weatherArr });
@@ -21,10 +22,10 @@ class Weather extends React.Component {
   render() {
     return (
       <>
-        <h2>Heres your data eh TESTS</h2>
-        {this.state.weatherList.map((item) => (
-          <div>
-            {item}
+        <h2>Here is the local weather for you!</h2>
+        {this.state.weatherList.map((item, idx) => (
+          <div key={idx}>
+            <p>{item.date} {item.description}</p>
           </div>
         ))}
       </>
