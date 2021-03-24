@@ -21,7 +21,7 @@ class Weather extends React.Component {
   render() {
     return (
       <>
-        <h2>Heres your data eh</h2>
+        <h2>Heres your data eh TESTS</h2>
         {this.state.weatherList.map((item) => (
           <div>
             {item}
