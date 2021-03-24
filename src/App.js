@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Weather from './weather';
 
 
 class App extends React.Component {
@@ -12,7 +13,9 @@ class App extends React.Component {
       location: {},
       searchQuery: '',
       imgSrc: '',
-      displayResults: false
+      displayResults: false,
+      hasError: null,
+      errorObj: {}
     };
   }
 
@@ -55,6 +58,9 @@ class App extends React.Component {
               <Card.Text>
                 Long ={this.state.location.lon}
               </Card.Text>
+              <Card.Text>
+                <Weather />
+              </Card.Text>
             </Card.Body>
 
           </Card>
@@ -66,3 +72,14 @@ class App extends React.Component {
 }
 
 export default App;
+
+
+// in error, there is a message that you can display in the obj.
+
+// you can make it so if/when the error happens, you can trigger diff string results IE 404, 400 etc. 
+
+// in error file you can just call that prop message (maybe a modal popup?)
+
+// handle close 
+
+// in alert tag, you can do that hanlde close 
