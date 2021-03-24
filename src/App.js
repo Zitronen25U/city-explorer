@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Weather from './weather';
 
 
 class App extends React.Component {
@@ -12,7 +13,9 @@ class App extends React.Component {
       location: {},
       searchQuery: '',
       imgSrc: '',
-      displayResults: false
+      displayResults: false,
+      hasError: null,
+      errorObj: {}
     };
   }
 
@@ -54,6 +57,9 @@ class App extends React.Component {
               </Card.Text>
               <Card.Text>
                 Long ={this.state.location.lon}
+              </Card.Text>
+              <Card.Text>
+                <Weather />
               </Card.Text>
             </Card.Body>
 
