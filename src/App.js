@@ -59,8 +59,8 @@ class App extends React.Component {
               </Card.Text>
               <Weather location={this.state.location} />
             </Card.Body>
-
           </Card>
+          
         }
 
       </>
