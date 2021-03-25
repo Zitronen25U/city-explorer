@@ -11,14 +11,20 @@ class Weather extends React.Component {
   }
 
   componentDidMount = async () => {
+
     const SERVER = process.env.REACT_APP_SERVER;
-    const query = {lat: this.props.location.lat, lon: this.props.location.lon};
-    console.log(query);
-    const weather = await axios.get(`${SERVER}weather`, {params: query});
+    const query = {
+
+      lat: this.props.location.lat,
+      lon: this.props.location.lon
+    };
+
+    const weather = await axios.get(`${SERVER}weather`, { params: query });
     console.log(weather);
-    const weatherArr = weather.body;
+    const weatherArr = weather.data;
     this.setState({ weatherList: weatherArr });
   };
+
 
   render() {
     return (
