@@ -31,7 +31,6 @@ class App extends React.Component {
       displayResults: true,
       imgSrc: `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_THEKEY}&center=${locationArray[0].lat},${locationArray[0].lon}&zoom=13`
     });
-
   };
 
   render() {
@@ -58,7 +57,7 @@ class App extends React.Component {
               <Card.Text>
                 Long ={this.state.location.lon}
               </Card.Text>
-              <Weather />
+              <Weather location={this.state.location} />
             </Card.Body>
 
           </Card>
